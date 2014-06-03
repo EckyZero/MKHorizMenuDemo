@@ -73,7 +73,7 @@
                             constrainedToSize:CGSizeMake(150, self.frame.size.height) 
                                 lineBreakMode:NSLineBreakByClipping].width;
         
-        customButton.frame = CGRectMake(xPos, 0, buttonWidth + buttonPadding, self.frame.size.height);
+        customButton.frame = CGRectMake(xPos, -2, buttonWidth + buttonPadding, self.frame.size.height);
         xPos += buttonWidth;
         xPos += buttonPadding;
         [self addSubview:customButton];        
