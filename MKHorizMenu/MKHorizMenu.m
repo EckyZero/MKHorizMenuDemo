@@ -69,10 +69,8 @@
         customButton.tag = tag++;
         [customButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
         
-        int buttonWidth = [title sizeWithFont:customButton.titleLabel.font
-                            constrainedToSize:CGSizeMake(150, self.frame.size.height) 
-                                lineBreakMode:NSLineBreakByClipping].width;
-        
+	int buttonWidth = [title boundingRectWithSize:CGSizeMake(150, self.frame.size.height) options:NSStringDrawingUsesFontLeading attributes:nil context:nil].size.width;
+	        
         customButton.frame = CGRectMake(xPos, -2, buttonWidth + buttonPadding, self.frame.size.height);
         xPos += buttonWidth;
         xPos += buttonPadding;
