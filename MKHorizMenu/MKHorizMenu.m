@@ -86,18 +86,6 @@
     [self layoutSubviews];  
 }
 
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
-{
-    UIView *view = [super hitTest:point withEvent:event];
-    
-    if([view isKindOfClass:[UIButton class]])
-    {
-        [self setSelectedIndex:view.tag - kButtonBaseTag animated:YES];
-        [self buttonTapped:view];
-    }
-    return view;
-}
-
 -(void) setSelectedIndex:(int) index animated:(BOOL) animated
 {
     UIButton *thisButton = (UIButton*) [self viewWithTag:index + kButtonBaseTag];    
