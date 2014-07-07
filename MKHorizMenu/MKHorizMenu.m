@@ -52,7 +52,7 @@
     self.selectedImage = [dataSource selectedItemImageForMenu:self];
 
     UIFont *buttonFont = [UIFont boldSystemFontOfSize:15];
-    int buttonPadding = 25;
+    int buttonPadding = 50;
     
     int tag = kButtonBaseTag;    
     int xPos = kLeftOffset;
